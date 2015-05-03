@@ -22,9 +22,13 @@ class RouteServiceProvider extends ServiceProvider {
 	 */
 	public function boot(Router $router)
 	{
-		//
-		
-		parent::boot($router);
+        parent::boot($router);
+
+//        $router->model('articles', 'App\article'); //find($id)
+        $router->bind('articles', function($id)
+        {
+            return \App\Article::published()->findOrFail($id);
+        });
 	}
 
 	/**
@@ -39,6 +43,13 @@ class RouteServiceProvider extends ServiceProvider {
 		{
 			require app_path('Http/routes.php');
 		});
+
+        $router->bind('tags', function($name)
+        {
+            return \App\Tag ::where('name', $name)->firstOrFail();
+        });
+
+//        $router->model('tags', 'App\Tag');
 	}
 
 }
