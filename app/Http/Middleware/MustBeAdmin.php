@@ -16,9 +16,9 @@ class MustBeAdmin
      */
     public function handle($request, Closure $next, $adminName)
     {
-        if(auth()=>check() && auth()->user()->name == $adminName){
-            return $next($request);
-        }
-        return redirect('/');
+        // if(auth()=>check() && auth()->user()->name == $adminName){
+        //     return $next($request);
+        // }
+        // return redirect('/');
     }
 }

@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin', ['middleware' => 'admin:Odhuu', function(){
-	return 'Odhuu';
-}]);
+// Route::get('admin', ['middleware' => 'admin:Odhuu', function(){
+// 	return 'Odhuu';
+// }]);
