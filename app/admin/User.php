@@ -5,8 +5,8 @@
  * For full list see documentation.
  */
 
-// Create admin model from User class with title and url alias
-Admin::model('\User')->title('Users')->as('users-alias-name')->denyCreating(function ()
+// Create admin model from User class with title and url alias ->as('users')
+Admin::model('\User')->title('Users')->denyCreating(function ()
 {
 	// Deny creating on thursday
 	return date('w') == 4;

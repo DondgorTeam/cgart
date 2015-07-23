@@ -136,14 +136,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Illuminate\Html\HtmlServiceProvider::class,
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        SleepingOwl\Admin\AdminServiceProvider::class,
         
     ],
 
@@ -201,8 +199,6 @@ return [
         'FormItem'          => SleepingOwl\Admin\Models\Form\FormItem::class,
         'ModelItem'         => SleepingOwl\Admin\Models\ModelItem::class,
 
-        'Form'      => Illuminate\Html\FormFacade::class,
-        'Html'      => Illuminate\Html\HtmlFacade::class,
 
     ],
 
