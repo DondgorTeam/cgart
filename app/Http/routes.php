@@ -24,11 +24,13 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-Route::get('profile', ['middleware' => 'auth', function() {
-    // Only authenticated users may enter...
-}]);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', function ()    {
+        return view('admin/index');
+    });
 
+    Route::get('user/profile', function () {
+        // Uses Auth Middleware
+    });
+});
 
-Route::get('dashboard', ['middleware' => 'auth', function() {
-    'DashboardController@index';
-}]);

@@ -1,27 +1,30 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container">
-    <form method="POST" action="/auth/login" class="form-signin">
-        {!! csrf_field() !!}
+    <div id="form">
+        <h1 class="logo">Artists</h1>
+        <form method="POST" action="/auth/login" >
 
-        <div>
-            Email
-            <input type="email" name="email" value="{{ old('email') }}">
-        </div>
-
-        <div>
-            Password
-            <input type="password" name="password" id="password">
-        </div>
-
-        <div>
-            <input type="checkbox" name="remember"> Remember Me
-        </div>
-
-        <div>
-            <button type="submit">Login</button>
-        </div>
-    </form>
-</div>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            
+            <div class="form-group">
+                <label for="email" class="control-label">Имэйл:</label>
+                <input  type="email" name="email" value="" class="form-control">
+            </div>
+    
+            <div class="form-group">
+                <label for="password" class="control-label">Нууц үг:</label>
+                <input type="password" name="password" id="password" class="form-control">
+            </div>
+    
+            <div class="form-group text-left">
+                <input type="checkbox" name="remember">
+                <label for="remember">Намайг сан</label>
+            </div>
+    
+            <div class="form-group buttons">
+                <button type="submit" class="btn btn-primary">Нэвтрэх</button>
+            </div>
+        </form>
+    </div>
 @endsection
