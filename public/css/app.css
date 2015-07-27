@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.4em;
   color: inherit; }
   h1 small,
   h1 .small, h2 small,
@@ -3357,6 +3357,8 @@ tbody.collapse.in {
       color: #444;
       background-color: transparent; } }
   .navbar-inverse .navbar-link {
+    font-size: 14px;
+    font-weight: 700;
     color: #cecece; }
     .navbar-inverse .navbar-link:hover {
       color: #fff; }
@@ -3370,6 +3372,12 @@ tbody.collapse.in {
     fieldset[disabled] .navbar-inverse .btn-link:hover,
     fieldset[disabled] .navbar-inverse .btn-link:focus {
       color: #444; }
+  .navbar-inverse .navbar-link i {
+    padding-right: 7px;
+    position: relative;
+    top: 2px;
+    top: 1px;
+    font-size: 14px; }
 
 .breadcrumb {
   padding: 8px 15px;
@@ -3833,5 +3841,65 @@ h1.logo {
 
 .navbar {
   margin: 50px 0; }
+
+.banner {
+  background: #080808;
+  padding: 7em 0;
+  position: relative;
+  overflow: hidden; }
+
+.banner h1 {
+  margin-top: 0;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  top: -5px; }
+
+.banner-profile {
+  padding: 1.5em 0;
+  overflow: visible;
+  min-height: 200px;
+  border-top: none !important; }
+
+.banner-profile .container {
+  position: relative; }
+
+.banner-profile .banner-profile_user {
+  float: left;
+  min-width: 500px; }
+
+.profile_avatar {
+  width: 120px;
+  float: left;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-right: 30px; }
+
+.banner-profile .banner-profile_name {
+  color: #b52a2f;
+  font-size: 2.3em;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: -10px; }
+
+.banner-profile .banner-profile_location {
+  color: #fff;
+  font-size: 1.2em; }
+
+.banner-profile .banner-profile_experience {
+  float: right; }
+
+.banner-profile .banner-profile_experience h4 {
+  color: #b52a2f;
+  font-size: 3em;
+  margin-top: 32px;
+  text-align: right; }
+
+.banner-profile .banner-profile_experience span {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-size: .6em;
+  margin-top: -22px; }
 
 /*# sourceMappingURL=app.css.map */
