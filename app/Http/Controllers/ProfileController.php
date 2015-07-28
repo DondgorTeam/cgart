@@ -18,75 +18,29 @@ class ProfileController extends Controller
      */
     public function updateProfile(Request $request)
     {
+        // $user = User::findOrFail($id);
+
+        // return view('albums.edit',compact('album','countries'));
+
         if ($request->user()) {
             // $request->user() returns an instance of the authenticated user...
         }
-    }
-    
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    // public function update($id, AlbumRequest $request)
+    // {
+    //     $album = Album::findOrFail($id);
+
+    //     $album->update($request->all());
+
+    //     return redirect('albums');
+    // }
 
     /**
      * Remove the specified resource from storage.

@@ -25,10 +25,9 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', function ()    {
-        return view('admin/index');
-    });
-
+    Route::get('user/{id}', 'DashboardController@index');
+    Route::post('user/{id}', 'DashboardController@updateProfile');
+    // Route::get('/dashboard', 'ProfileController@updateProfile');
     Route::get('user/profile', function () {
         // Uses Auth Middleware
     });

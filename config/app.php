@@ -190,7 +190,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        
+
         'Admin'             => SleepingOwl\Admin\Admin::class,
         'AdminAuth'         => SleepingOwl\AdminAuth\Facades\AdminAuth::class,
         'AdminRouter'       => SleepingOwl\Admin\Facades\AdminRouter::class,
@@ -198,6 +198,7 @@ return [
         'Column'            => SleepingOwl\Admin\Columns\Column::class,
         'FormItem'          => SleepingOwl\Admin\Models\Form\FormItem::class,
         'ModelItem'         => SleepingOwl\Admin\Models\ModelItem::class,
+
 
 
     ],

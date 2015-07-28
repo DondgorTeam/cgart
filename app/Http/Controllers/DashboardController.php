@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -14,10 +15,26 @@ class DashboardController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index($id)
     {
+        $user = User::findOrFail($id);
 
-        return view('admin.index');
+        return view('admin.index',  compact('user'));
+    }
+
+    /**
+     * Update the user's profile.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function updateProfile($id, Request $request)
+    {
+        if ($request->user()) {
+            $user = User::findOrFail($id);
+            $user->update($request->all()); // $request->user() returns an instance of the authenticated user...
+            return redirect('/user/'.$user->id);//->route('DashboardController@index', ['id' => $user->id]);
+        }
     }
 
     /**
