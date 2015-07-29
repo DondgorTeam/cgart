@@ -22,6 +22,13 @@ class DashboardController extends Controller
         return view('admin.index',  compact('user'));
     }
 
+    public function dashboard($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('admin.dashboard',  compact('user'));
+    }
+
     /**
      * Update the user's profile.
      *
