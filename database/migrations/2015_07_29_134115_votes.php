@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Pictures extends Migration
+class Votes extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,12 @@ class Pictures extends Migration
      */
     public function up()
     {
-        Schema::create('pictures', function(Blueprint $table)
+        Schema::create('votes', function(Blueprint $table)
         {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->integer('category_id')->unsigned();
-            $table->string('name', 100);
-            $table->string('path');
-            $table->boolean('published');
+            $table->integer('picture_id')->unsigned();
+            $table->smallInteger('votes');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class Pictures extends Migration
     public function down()
     {
         
-        Schema::drop('pictures');
-    } 
+        Schema::drop('votes');
+    }
 }
