@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Mongolian artists- @yield('Artists')</title>
-        <link rel="stylesheet" href="/css/app.css" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css" />
         <!-- font -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,900,900italic&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

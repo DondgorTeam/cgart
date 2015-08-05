@@ -1,10 +1,9 @@
 @extends('home')
-
 @section('content')
 <div class="container">
     <div id="signup-form">
         <h1 class="">Artists</h1>
-        <form method="POST" action="/auth/register">
+        <form method="POST" action="{{ route('auth.register.post') }}">
             <div class="panel">
                 <div class="panel-body">
                     <fieldset>
