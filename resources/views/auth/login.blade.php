@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('home')
 
 @section('content')
     <div id="form">

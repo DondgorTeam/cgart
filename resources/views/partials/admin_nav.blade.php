@@ -12,9 +12,9 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li><a class="navbar-link" href="#"><i class="fa fa-picture-o"></i> Зурагууд</a></li>
-              <li><a class="navbar-link" href="#"><i class="fa fa-th-large"></i>Ангилал</a></li>
-              <li><a class="navbar-link" href="#"><i class="fa fa-connectdevelop"></i>Форум</a></li>
+              <li><a class="{{ Request::is('picturies') ? 'active' : '' }} navbar-link" href="/picturies"><i class="fa fa-picture-o"></i> Зургууд</a></li>
+              <li><a class="{{ Request::is('categories') ? 'active' : '' }} navbar-link" href="/categories"><i class="fa fa-th-large"></i>Ангилал</a></li>
+              <!--<li><a class="{{ Request::is('about') ? 'active' : '' }} navbar-link" href="#"><i class="fa fa-connectdevelop"></i>Форум</a></li>-->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
