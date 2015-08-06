@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -11,10 +11,9 @@
                 </div>
             
                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                     <ul class="nav navbar-nav navbar-left">
+                     <ul class="nav navbar-nav">
                          <li><a class="{{ Request::is('picturies') ? 'active' : '' }} navbar-link" href="/picturies"><i class="fa fa-picture-o"></i> Бүтээлүүд</a></li>
                          <li><a class="{{ Request::is('categories') ? 'active' : '' }} navbar-link" href="/categories"><i class="fa fa-th-large"></i> Ангилал</a></li>
-                          <!--<li><a class="navbar-link" href="#"><i class="fa fa-connectdevelop"></i>Форум</a></li>-->
                         
                     </ul>
                       <ul class="nav navbar-nav navbar-right">
