@@ -1,0 +1,278 @@
+
+
+// Modules and Variables
+// @import "partials/base";
+
+// Partials
+// @import "partials/reset";
+// @import "partials/typography";
+// @import "partials/buttons";
+// @import "partials/figures";
+@import "partials/grids";
+// ...
+
+// Third-party
+// @import "vendor/colorpicker";
+// @import "vendor/jquery.ui.core";
+
+@import "gallery";
+@import "normalize";
+@import "buttons";
+@import "layout";
+@import "form";
+
+
+
+@import 'nav';
+
+$primary_color: #353D44; //#3A4350;
+$text_color: #fff;
+$text_color_link: #D8D8D8;
+$link_color: #007aff;
+
+
+a {
+   color: $text_color_link;
+   text-decoration: none;
+   
+   &:hover { color: white; }
+}
+    
+ul { padding: 0; }
+html {
+    width: 100%;
+    height: 100%;
+    background-color: $primary_color;
+}
+    
+body {
+    // background-color: #3A4350;
+    background-size: 50px 50px;
+    color: $text_color;
+    font-size: 13px;
+    font-weight: 400;
+}
+    
+
+h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+    
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+    
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+figure { margin: 0; }
+
+.header {
+    background-color: #202833;
+    box-shadow: 0 1px 1px rgba(0,0,0,.14);
+    margin-bottom: 40px;
+    height: 60px;
+    position: fixed;
+    z-index: 5000;
+    width: 100%;
+    }
+main{
+    padding-top: 70px;
+}
+main .display{
+    height: 100vh;
+}
+#footer { background-color: #202833; }
+
+.profile {
+    display: flex;
+    padding: 60px 0 69px;
+}
+    
+.profile_avatar {
+    position: relative;
+    margin-right: 50px;
+}
+    
+.figure {
+    position: relative;
+    overflow: hidden;
+}
+.figure a img {
+    display: block;
+}
+.figure figcaption {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: opacity 0.2s ease-out;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.6+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+     
+}
+  
+.figure figcaption a { }
+
+.figure figcaption .artist {
+    float: left;
+    padding:9px 12px;
+    margin: 0 0 0 2px;
+    font-size: 13px;
+}
+
+.figure figcaption .vote{
+    float: right;
+    padding: 4px 4px 0 4px;
+}
+    
+.figure a { display: block; }
+        
+.figure:hover figcaption { opacity: 1; }
+.figure .figure_title{
+    line-height: 17px;
+    padding: 4px 0 15px 0;
+    text-align: center;
+} 
+.figure .figure_title a{
+    color: #D2CACF; 
+}
+.figure .figure_title a:hover { color: white; }
+
+.image { text-align:center;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #333B46;
+     }
+
+#sidebar {
+    width: 200px;
+    margin: 0 20px;
+    float: left;
+    margin-left: 10px;
+}
+#sidebar .user-info {
+    margin: 40px 0 10px;
+}
+#page-content {
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.user-info .avatar {
+        position: relative;
+    display: block;
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+.user-info .user-avatar {
+        width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 10px;
+}
+
+.user-info figcaption {
+    overflow: hidden;
+}
+.user-info h2.sidebar-username {
+    white-space: nowrap;
+}
+
+#sidebar .user-stats {
+    margin: 7px 0 15px;
+}
+.user-sidebar .user-stats ul li {
+    color: #c6c6cc;
+}
+.user-stats ul li span.active {
+    color: #c6c6cc;
+    background: #1d1d1f;
+}
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
+.user-stats ul .counter {
+    padding-left: 5px;
+}
+// header
+ul.path>* {
+    display: inline;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ul.path a {
+    color: #c6c6cc;
+}
+// image-area
+.image-area {
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    cursor: zoom-in;
+    cursor: -webkit-zoom-in;
+        background-color: #333B46;
+}
+.image-area a.image-prev {
+    right: auto;
+    left: 0;
+    border-radius: 0 4px 4px 0;
+}
+.image-area a.image-prev {
+    top: 50%;
+    margin-top: -28px;
+    width: 45px;
+    height: 55px;
+}
+.image-area>a {
+    position: absolute;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    right: 40px;
+}
+.image-area>* {
+    line-height: normal;
+    opacity: 0;
+    transition: opacity 300ms;
+    text-align: left;
+}
+.image-area:hover *{
+    opacity: 1;
+}
+.image-area img {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1!important;
+    cursor: zoom-in;
+    cursor: -webkit-zoom-in;
+}
+
+.image-area a.image-next {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}

@@ -1,0 +1,61 @@
+#images .wrap {
+    text-align: justify;
+    font-size: 0;
+}
+#images .wrap:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+#images .wrap figure {
+    width: 18.42%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+#images .wrap figure {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+.clear-fix:after {
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    content: '';
+}
+
+#footer .wrap {
+    text-align: justify;
+    font-size: 0;
+}
+#footer .wrap:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.wrap .column {
+    font-size: 13px;
+}
+
+.wrap .column {
+    
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.two {
+    width: 48%;
+}
+.three {
+    width: 30%;
+}
+.five {
+    width: 18.42%;
+}
+
+.right {
+    float: right;
+}

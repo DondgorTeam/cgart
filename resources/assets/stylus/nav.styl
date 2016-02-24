@@ -1,0 +1,110 @@
+nav ul, li
+    margin: 0
+    padding: 0
+    list-style: none
+ul
+    display: flex
+li
+    text-align: center
+    align-items: center;
+    display: inherit;
+
+border-radius(val)
+  -webkit-border-radius: val
+  -moz-border-radius: val
+  border-radius: val
+
+
+.navigation
+    padding-top: 27px
+    padding-bottom: 27px
+    align-self: flex-start
+    height: 36px;
+    
+.logo
+    margin: 0
+    letter-spacing: .8px
+    float: left
+    font-size: 31px
+    font-weight: 700
+    color: #fff
+
+
+
+.navigation_links
+    float: left
+    margin-top: 0
+    margin-left: 60px
+    position: relative
+    top: 10px
+    
+.navigation_user
+    float: right;
+    margin-top: 0;
+    position: relative;
+    top: 10px;
+
+
+    
+ul
+  li a
+    display: block
+    color: #D2D5DA
+    padding: 8px
+    margin: 0 10px
+    text-transform: uppercase
+    
+    &:hover
+        color: #fff
+
+.dropdown
+    position: relative;
+    z-index: 5;
+
+.dropdown a img
+    width: 30px
+    border-radius(15px);
+    margin-left: 12px
+
+.dropdown_heading
+    display: flex
+    align-items: center
+    justify-content: center
+
+.dropdown_menu
+    display: none
+    position: absolute
+    background: #D7DEE8
+    color: #000
+    list-style: none
+    z-index: 999
+    border-radius: 4px
+    padding: 7px 0
+    margin: 0
+    border: 1px solid #eee
+    font-size: 12px
+    font-weight: 700
+    width: 100%
+    min-width: 150px
+    
+.dropdown_menu li  
+    margin: 3px 0
+
+.dropdown_menu li a
+    color: #3a3a3a
+    font-size: 1.1em
+    font-weight: 500
+    padding: 0 12px
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+    text-transform: none
+
+.dropdown_menu li i
+    padding-right: 8px
+
+.dropdown:hover .dropdown_menu
+    display: inherit

@@ -1,0 +1,32 @@
+$mobile-small:	240px;
+$mobile-large:	320px;
+$tablet-small:	480px;
+$tablet-large:	768px;
+$screen-small:	1024px;
+$screen-large:	1280px;
+
+.container {
+    // lost-utility: clearfix;
+    width: $screen-large;
+    margin: 0 auto;
+}
+
+
+ 
+
+.grid_row {
+    display: flex;
+}
+    
+
+.grid_column{
+    flex: 1;
+    text-align: center;
+}
+    
+
+
+.category {
+    // lost-waffle:1/6
+    height:200px;
+}
